@@ -44,3 +44,10 @@ do
 poulailler.Affiche();
 
 // Suppression d'une poule
+int pouleSupp; // L'indice de la poule à supprimer du poulailler
+
+Console.WriteLine($"Quelle poule voulez-vous supprimer ? (donner son indice)");
+pouleSupp = Convert.ToInt32(Console.ReadLine());
+
+poulailler.Supp(pouleSupp);
+poulailler.Affiche();

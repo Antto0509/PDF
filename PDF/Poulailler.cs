@@ -59,7 +59,7 @@ namespace PDF
         {
             for (int i = 0; i < poule.Count() ; i++) 
             { 
-                if (i == pouleSupp)
+                if (i+1 == pouleSupp)
                 {
                     poule.RemoveAt(i);
                 }
