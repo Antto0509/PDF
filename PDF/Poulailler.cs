@@ -44,13 +44,15 @@ namespace PDF
 
         public void Affiche()
         {
-            Console.WriteLine($"Dans le poulailler {nom} de capacité maximal {capacitéMax} il y a :");
+            Console.WriteLine($"Le poulailler : {nom}");
+            Console.WriteLine($"Capacité maximal : {capacitéMax}");
             for (int i = 0; i < poule.Count(); i++)
             {
-                Console.WriteLine($"Poule {i} : {poule[i]}");
+                Console.WriteLine($"Poule {i} : ");
+                poule[i].Afficher();
                 
             }
-            Console.WriteLine(poule.Count());
+            Console.WriteLine($"Le nombre de poules : {poule.Count()}");
         }
 
         public void Supp(int pouleSupp)
