@@ -35,15 +35,17 @@ namespace PDF
         {
             nom = nomPoulailler;
             capacitéMax = capacitéMaxPoulailler;
-            //poule.Add(poulePoulailler);
         }
 
-        
+        public void Ajout(Poule pouleP)
+        {
+            poule.Add(pouleP);
+        }
 
         public void Affiche()
         {
             Console.WriteLine($"Dans le poulailler {nom} de capacité maximal {capacitéMax} il y a :");
-            for (int i = 0; i < poule.Count() ; i++)
+            for (int i = 0; i < poule.Count(); i++)
             {
                 Console.WriteLine($"Poule {i} : {poule[i]}");
                 
