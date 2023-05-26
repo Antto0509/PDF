@@ -48,11 +48,11 @@ namespace PDF
             Console.WriteLine($"Capacité maximal : {capacitéMax}");
             for (int i = 0; i < poule.Count(); i++)
             {
-                Console.WriteLine($"Poule {i} : ");
+                Console.WriteLine($"Poule {i + 1} : ");
                 poule[i].Afficher();
                 
             }
-            Console.WriteLine($"Le nombre de poules : {poule.Count()}");
+            Console.WriteLine($"Le nombre de poule(s) : {poule.Count()}");
         }
 
         public void Supp(int pouleSupp)
