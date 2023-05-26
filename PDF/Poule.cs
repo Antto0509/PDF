@@ -51,7 +51,7 @@ namespace PDF
         /// </summary>
         public void Afficher()
         {
-            Console.WriteLine($"{nom} ({race})");
+            Console.WriteLine($"{nom} (race : {race}) (intensite de ponte : {intensitePonte}) (taille : {taille})");
         }
     }
 }
