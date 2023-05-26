@@ -52,5 +52,16 @@ namespace PDF
             }
             Console.WriteLine(poule.Count());
         }
+
+        public void Supp(int pouleSupp)
+        {
+            for (int i = 0; i < poule.Count() ; i++) 
+            { 
+                if (i == pouleSupp)
+                {
+                    poule.RemoveAt(i);
+                }
+            }
+        }
     }
 }
