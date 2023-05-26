@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace PDF
 {
+    /// <summary>
+    /// Modélise un poulailler
+    /// </summary>
     public class Poulailler
     {
         /// <summary>
@@ -28,24 +31,24 @@ namespace PDF
         /// </summary>
         /// <param name="nomPoulailler">Nom</param>
         /// <param name="capacitéMaxPoulailler">Capacité Maximal</param>
-        /// <param name="poulePoulailler">Poule</param>
-        public Poulailler(string nomPoulailler, int capacitéMaxPoulailler, Poule poulePoulailler)
+        public Poulailler(string nomPoulailler, int capacitéMaxPoulailler)
         {
             nom = nomPoulailler;
             capacitéMax = capacitéMaxPoulailler;
-            for (int i = 0; i < capacitéMax; i++) 
-            {
-                poule.Add(poulePoulailler);
-            }
+            //poule.Add(poulePoulailler);
         }
+
+        
 
         public void Affiche()
         {
             Console.WriteLine($"Dans le poulailler {nom} de capacité maximal {capacitéMax} il y a :");
-            for (int i = 0; i < capacitéMax ; i++)
+            for (int i = 0; i < poule.Count() ; i++)
             {
                 Console.WriteLine($"Poule {i} : {poule[i]}");
+                
             }
+            Console.WriteLine(poule.Count());
         }
     }
 }
