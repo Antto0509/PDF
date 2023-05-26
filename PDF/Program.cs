@@ -8,6 +8,7 @@ int capacitéMax;
 string nomPoule;
 string race;
 int intensite;
+int taille;
 
 // Instanciation d'un poulailler
 Console.WriteLine("Nom du poulailler : ");
@@ -15,20 +16,31 @@ nomPoulailler = Console.ReadLine();
 Console.WriteLine("Capacité maximal : ");
 capacitéMax = Convert.ToInt32(Console.ReadLine());
 
-Poulailler poulailler1 = new Poulailler(nomPoulailler, capacitéMax);
+Poulailler poulailler = new Poulailler(nomPoulailler, capacitéMax);
 
 // Instanciation des poules
-Console.WriteLine("Nom de la poule : ");
-nomPoule = Console.ReadLine();
-Console.WriteLine("La race : ");
-race = Console.ReadLine();
-Console.WriteLine("Intensite de la ponte : ");
-intensite = Convert.ToInt32(Console.ReadLine());
+int resAjout; // Resultat lors de la demande de continuité
 
-Poule pouleP = new Poule(nomPoule, race, intensite, Taille.L);
+do
+{
+    Console.WriteLine("Nom de la poule : ");
+    nomPoule = Console.ReadLine();
+    Console.WriteLine("La race : ");
+    race = Console.ReadLine();
+    Console.WriteLine("Intensite de la ponte : ");
+    intensite = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Taille de la poule (S = 0, M = 1, L = 2, Xl = 3, XXl = 4): ");
+    taille = Convert.ToInt32(Console.ReadLine());
 
-//Poulailler.Ajout(pouleP);
+    Poule pouleP = new Poule(nomPoule, race, intensite,(Taille) taille);
 
+    poulailler.Ajout(pouleP);
+
+    Console.WriteLine("Vous souhaitez encore ajouter une poule ? (0 pour Non ou 1 pour Oui)");
+    resAjout = Convert.ToInt32(Console.ReadLine());
+} while (resAjout == 1);
 
 // Affichage de ce poulailler
-poulailler1.Affiche();
+poulailler.Affiche();
+
+// Suppression d'une poule
