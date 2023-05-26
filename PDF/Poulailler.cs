@@ -21,8 +21,7 @@ namespace PDF
         /// <summary>
         /// Poule correspondant au poulailler
         /// </summary>
-        Poule poule;
-
+        List<Poule> poule = new List<Poule>();
 
         /// <summary>
         /// Création d'une nouvelle instance d'un poulailler
@@ -34,14 +33,18 @@ namespace PDF
         {
             nom = nomPoulailler;
             capacitéMax = capacitéMaxPoulailler;
-            poule = poulePoulailler;
+            for (int i = 0; i < capacitéMax; i++) 
+            {
+                poule.Add(poulePoulailler);
+            }
         }
 
         public void Affiche()
         {
-            for (int i = 0; i <  ; i++)
+            Console.WriteLine($"Dans le poulailler {nom} de capacité maximal {capacitéMax} il y a :");
+            for (int i = 0; i < capacitéMax ; i++)
             {
-                Console.WriteLine($"{nom} {capacitéMax} {poule}");
+                Console.WriteLine($"Poule {i} : {poule[i]}");
             }
         }
     }
