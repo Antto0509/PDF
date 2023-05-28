@@ -65,5 +65,10 @@ namespace PDF
                 }
             }
         }
+
+        public void SuppPoulailler()
+        {
+            poule.Clear();
+        }
     }
 }
