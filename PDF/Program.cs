@@ -58,3 +58,14 @@ if (resSupp == 1)
     poulailler.Supp(pouleSupp);
     poulailler.Affiche();
 }
+
+// Suppression d'un poulailler
+Console.WriteLine("\nVous souhaitez supprimer toutes les poules d'un poulailler ? (0 pour Non ou 1 pour Oui)");
+int resSuppPoulailler = Convert.ToInt32(Console.ReadLine()); // Resultat lors de la demande de suppression
+
+
+if (resSuppPoulailler == 1)
+{
+    poulailler.SuppPoulailler();
+    poulailler.Affiche();
+}
